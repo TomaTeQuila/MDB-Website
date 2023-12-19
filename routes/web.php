@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HubController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,6 @@ Route::get('/', function () {
 });
 
 Route::get('/', [HubController::class, 'index'])->name('hub.index');
+
+
+Route::get('/login', [LoginController::class, 'index'])->name('login.index');
