@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue');
+
+*{
+    font-family: Roboto, sans-serif;
+    padding: 0px 0px 0px;
+    margin: 0px 0px 0px;
+    box-sizing: border-box;
+    
+}
+
+body{
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: rgb(16, 16, 16, 1);
+    box-shadow: 3px 3px 5px rgb(0, 0, 0, 0.1);
+}
+
+nav ul{
+    padding: 1px;
+    margin: 0px 0px 0px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav a:hover{
+    background-color: rgb(38, 38, 38);
+    color: rgb(235, 251, 255);
+}
+.first {
+    margin-right: auto; /* Mueve este elemento al principio */
+}
+
+.last {
+    margin-left: auto; /* Mueve este elemento al final */
+}   
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-botton{
+    display: none;
+}
+
+.index-section{
+    margin: 0;
+    background: url(../images/mdblambo.jpg) no-repeat;
+    padding-bottom: 140px;
+}
+
+.index-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.index-info img{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0;
+    max-height: 240px;
+    transition: all 0.3s ease;
+}
+
+.index-info img:hover{
+    transform: scale(1.5);
+}
+
+.index-info p{
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    text-align: center;
+    text-shadow: 0 0 20px black;
+    width: 600px;
+    resize: both;
+    line-height: 1;
+    text-decoration: underline dashed;
+}
+
+.container-cards{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 2200px;
+}
+
+.card-index{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card-index:hover{
+    box-shadow: 0px 0px 35px rgba(255, 0, 0, 0.825);
+    transform: translatey(-3%);
+}
+
+.tienda:hover{
+    box-shadow: 0px 0px 35px rgba(0, 255, 0, 0.825);
+    transform: translatey(-3%);
+}
+
+.galeria:hover{
+    box-shadow: 0px 0px 35px rgba(0, 0, 255, 0.825);
+    transform: translatey(-3%);
+}
+
+.card-index img{
+    width: 100%;
+    height: 100px;
+}
+
+.card-index .contenido{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.card-index .contenido a{
+    color: white;
+    text-decoration: none;
+    outline: 1px solid rgba(0, 0, 0, 0.825)black;
+    box-shadow: -3px 3px 5px rgba(0, 0, 0, 0.825);
+    padding: 4px 25px;
+}
+
+
+footer{
+    background-color: #000000; /* Ajusta el color de fondo según tus preferencias */
+    padding: 10px; /* Ajusta el espacio interno del footer según tus preferencias */
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-botton{
+        display: block;
+    }
+}
+
+@media(max-width: 425px){
+    .sidebar{
+        width: 100%;
+    }
+
+    .index-info p{
+        width: 100%;
+    }
+}
+
+@media(max-width: 600px){
+    .sidebar{
+        width: 100%;
+    }
+
+    .index-info p{
+        width: 300px;;
+    }
+}
+
+@media(max-width: 800px){
+    .botonera-layout{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .botonera-layout a{
+        margin-bottom: 10px;
+    }
+}
