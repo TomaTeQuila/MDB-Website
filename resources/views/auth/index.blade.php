@@ -28,7 +28,7 @@
                 <input type = "submit" value = "Iniciar sesion" >
                 
                 <div class = "registrar">
-                    ¿Aún no estás registrado? registrate <a href="*">aquí</a>.
+                    ¿Aún no estás registrado? registrate <a href="{{route('auth.register')}}">aquí</a>.
                 </div>
 
             </form>
