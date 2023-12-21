@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticable;
 
-class Usuario extends Model
+class Usuario extends Authenticable
 {
     use HasFactory;
     use SoftDeletes;

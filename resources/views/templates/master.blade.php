@@ -15,17 +15,23 @@
             <li onclick=closeSidebar()><a href="#"><span class="material-symbols-outlined">
                 close
             </span></a></li>
-            <li><a href="#">Información</a></li>
+            <li><a href="https://discord.gg/j6j8Cheutw" target="_blank">Discord</a></li>
             <li><a href="#">Tienda</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Iniciar Sesion</a></li>
+            <li><a href="https://www.youtube.com/@mdbcrp4517 target="_blank"">Youtube</a></li>
+            <li><a href="{{route('auth.index')}}">Iniciar Sesion</a></li>
         </ul>
         <ul>
             <li class="first"><a href="#">MDB Roleplay</a></li>
             <li class="hideOnMobile"><a href="https://discord.gg/j6j8Cheutw" target="_blank">Discord</a></li>
             <li class="hideOnMobile"><a href="#">Tienda</a></li>
             <li class="hideOnMobile"><a href="https://www.youtube.com/@mdbcrp4517" target="_blank">Youtube</a></li>
-            <li class="hideOnMobile last"><a href="{{route('auth.index')}}">Iniciar Sesion</a></li>
+            @if(Gate::allows('usuario-login') || Gate::allows('soporte-login') || Gate::allows('admin-login'))
+            <li class="hideOnMobile last">
+                <a href="{{route('usuario.logout')}}">Cerrar Sesion</a></li>
+            @else            
+            <li class="hideOnMobile last">
+                <a href="{{route('auth.index')}}">Iniciar Sesion</a></li>
+            @endif
             <li class="menu-botton" onclick=showSidebar()><a href="#"><span class="material-symbols-outlined">menu</span></a></li>
         </ul>
     </nav>

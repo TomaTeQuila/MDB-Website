@@ -14,6 +14,23 @@ class UsuarioController extends Controller
         $this->middleware('auth')->except(['login', 'logout', 'store']);
     }
 
+
+    public function login(Request $req) {
+        $username = $req->username;
+        $password = $req->password1;
+
+        if(Auth::attempt(['username'=> $username, 'password'=> $password])) {
+            return redirect()->route('hub.index');
+        }
+
+        return back()->withErrors([
+            'username' => 'Credenciales incorrectas',
+        ])->onlyInput('username');
+    }
+    public function logout() {
+        Auth::logout();
+        return redirect()->route('hub.index');
+    }
     public function store(UsuarioRequest $request){
         $usuario = new Usuario();
 

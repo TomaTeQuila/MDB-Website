@@ -30,3 +30,5 @@ Route::get('/registro', [AuthController::class, 'register'])->name('auth.registe
 
 // UsuarioController
 Route::post('/register', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::post('/login', [UsuarioController::class, 'login'])->name('usuario.login');
+Route::get('/logout', [UsuarioController::class, 'logout'])->name('usuario.logout');

@@ -9,17 +9,18 @@
     <body>
         <div class="formu">
             <h1>Inicio de sesión</h1>
-            <form method = "post">
-
+            <form method = "POST" action="{{route('usuario.login')}}">
+                @method('POST')
+                @csrf
                 <div class = "input-contenedor">
                     <i class = "fa-solid fa-envelope"></i>
-                    <input type = "text" required placeholder=" " readonly onfocus="this.removeAttribute('readonly')">
+                    <input type="text" name="username" id="username" required placeholder=" " readonly onfocus="this.removeAttribute('readonly')">
                     <label>Nombre de usuario</label>
                 </div>
 
                 <div class = "input-contenedor">
                     <i class = "fa-solid fa-lock"></i>
-                    <input type = "password" required readonly onfocus="this.removeAttribute('readonly')">
+                    <input type = "password" name="password1" id="password1" required readonly onfocus="this.removeAttribute('readonly')">
                     <label>Contraseña</label>
                 </div>
                 
