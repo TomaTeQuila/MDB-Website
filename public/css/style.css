@@ -83,7 +83,6 @@ nav a:hover{
 .index-section{
     margin: 0;
     background: url(../images/mdblambo.jpg) no-repeat;
-    padding-bottom: 140px;
 }
 
 .index-info{
@@ -243,6 +242,7 @@ footer{
     .index-info p{
         width: 300px;;
     }
+
     .container-cards{
         flex-direction: column;
         align-items: center;
@@ -250,6 +250,20 @@ footer{
         flex-wrap: wrap;
         width: 100%;
         max-width: 420px;
+        margin: 0px 0px 0px;
+    }
+
+    .info-section{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 420px;
+        margin: 0px 0px 0px;
+    }
+    .info-section h1{
+        font-size: 36px;
     }
 
     .index-info img{
@@ -265,5 +279,11 @@ footer{
     }
     .botonera-layout a{
         margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 1500px){
+    .info-section{
+        background: url(../images/info.jpg) 100%;
     }
 }
